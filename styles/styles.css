@@ -66,6 +66,7 @@ nav {
 .register-btn:hover {
   background-color: var(--primary-color);
   color: #fff;
+  border: 2px solid #fff;
 }
 /* Slider Styles */
 .carousel {
@@ -160,6 +161,14 @@ nav {
 
 .primary-btn:hover .right-arrow {
   transform: translateX(12px);
+}
+
+/* Register Styles */
+.register-section {
+  background-color: var(--primary-color);
+}
+.register-section h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 /* Media Quries to overwrite some default bootstrap responsive sytles*/
 
