@@ -1,0 +1,136 @@
+/* COMMON STYLES */
+:root {
+  --primary-color: #0ea5e9;
+  --secondary-color: #777777;
+  --light-sky: #f0f9ff;
+}
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+P {
+  color: var(--secondary-color);
+  font-size: 18px;
+  line-height: 1.6 !important;
+}
+.mb-8 {
+  margin-bottom: 8rem;
+}
+/* Component Styles */
+
+/* Header Styles */
+nav {
+  height: 80px;
+  z-index: 999;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.nav-item {
+  margin-right: 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+}
+.nav-item:hover {
+  background-color: var(--light-sky);
+}
+.nav-item:last-child {
+  margin-right: 0;
+}
+.nav-items-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-btn {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1.5rem;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all 0.2s;
+}
+
+.register-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+/* Slider Styles */
+.carousel {
+  position: relative !important;
+}
+.slider-item {
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  position: relative;
+  border-radius: 5px;
+}
+.slider-one {
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.7),
+      rgba(34, 34, 34, 0.7)
+    ),
+    url(../images/cover/cover-1.png);
+}
+.slider-two {
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.7),
+      rgba(34, 34, 34, 0.7)
+    ),
+    url(../images/cover/cover-2.jpg);
+}
+
+.slider-three {
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.7),
+      rgba(34, 34, 34, 0.7)
+    ),
+    url(../images/cover/cover-3.jpg);
+}
+.slider-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider-details p {
+  color: #f4f4f4;
+}
+
+/* Courses Styles */
+.courses {
+  gap: 1.5rem !important;
+}
+.course-item {
+  flex-shrink: 0;
+  flex-basis: 48%;
+}
+.img-container {
+  padding: 0 !important;
+}
+.img-container img {
+  border: none gray !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+.course-price {
+  color: var(--primary-color);
+}
+
+/* Media Quries to overwrite some default bootstrap styles */
+@media screen and (max-width: 992px) {
+  .course-item {
+    flex-basis: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    .course-item {
+      flex-basis: 80%;
+      margin: 0 auto;
+    }
+  }
+}
