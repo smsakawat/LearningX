@@ -170,6 +170,15 @@ nav {
 .register-section h2 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* Successfull Students */
+.successfull-students {
+  gap: 12px;
+}
+.student-card {
+  flex-shrink: 0;
+  flex-basis: 24%;
+}
 /* Media Quries to overwrite some default bootstrap responsive sytles*/
 
 /* For tablets */
@@ -177,11 +186,17 @@ nav {
   .course-item {
     flex-basis: 100%;
   }
+  .student-card {
+    flex-basis: 48%;
+  }
   /* For mobiles */
   @media screen and (max-width: 768px) {
     .course-item {
       flex-basis: 80%;
       margin: 0 auto;
+    }
+    .student-card {
+      flex-basis: 80%;
     }
   }
 }
