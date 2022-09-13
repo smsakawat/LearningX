@@ -21,15 +21,32 @@ P {
 .mb-8 {
   margin-bottom: 8rem;
 }
-a:link,
-a:visited {
+.primary-btn {
+  display: inline-block;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+}
+.primary-btn:hover {
+  background-color: var(--dark-sky);
+}
+.primary-btn a:link,
+.primary-btn a:visited {
   text-decoration: none;
   color: #fff;
 }
-a:hover,
-a:active {
+.primary-btn a {
   color: #fff;
+  text-decoration: none;
 }
+
 /* Component Styles */
 
 /* Header Styles */
@@ -139,27 +156,7 @@ nav {
 .course-price {
   color: var(--primary-color);
 }
-.primary-btn {
-  display: inline-block;
-  cursor: pointer;
-  background: var(--primary-color);
-  color: #fff;
-  padding: 1rem 2rem;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 5px;
-  transition: all 0.2s ease-in;
-}
-.primary-btn:hover {
-  background-color: var(--dark-sky);
-}
-.primary-btn a:link,
-.primary-btn a:visited {
-  text-decoration: none;
-  color: #fff;
-}
+
 .right-arrow::before {
   font-weight: 600;
   font-size: 20px;
@@ -238,22 +235,14 @@ nav {
   .student-card {
     flex-basis: 48%;
   }
-  .slider-btn-left,
-  .slider-btn-right {
-    display: none;
+}
+/* For mobiles */
+@media screen and (max-width: 768px) {
+  .course-item {
+    flex-basis: 80%;
+    margin: 0 auto;
   }
-  /* For mobiles */
-  @media screen and (max-width: 768px) {
-    .course-item {
-      flex-basis: 80%;
-      margin: 0 auto;
-    }
-    .student-card {
-      flex-basis: 80%;
-    }
-  }
-  .slider-btn-left,
-  .slider-btn-right {
-    display: none;
+  .student-card {
+    flex-basis: 80%;
   }
 }
