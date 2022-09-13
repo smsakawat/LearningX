@@ -21,6 +21,15 @@ P {
 .mb-8 {
   margin-bottom: 8rem;
 }
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover,
+a:active {
+  color: #fff;
+}
 /* Component Styles */
 
 /* Header Styles */
@@ -179,15 +188,59 @@ nav {
   flex-shrink: 0;
   flex-basis: 24%;
 }
+
+/* Studetns feedback section */
+.student-feedback {
+  text-align: justify;
+}
+.author-student-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.feedback-student-job {
+  font-size: 14px;
+}
+.slider-btn-right,
+.slider-btn-left {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-btn-left {
+  background-color: #bae6fd;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.slider-btn-left i:before {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+.slider-btn-right {
+  background-color: var(--primary-color);
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.slider-btn-right i:before {
+  font-size: 24px;
+  color: #fff;
+}
 /* Media Quries to overwrite some default bootstrap responsive sytles*/
 
 /* For tablets */
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 767px) and (max-width: 992px) {
   .course-item {
     flex-basis: 100%;
   }
   .student-card {
     flex-basis: 48%;
+  }
+  .slider-btn-left,
+  .slider-btn-right {
+    display: none;
   }
   /* For mobiles */
   @media screen and (max-width: 768px) {
@@ -198,5 +251,9 @@ nav {
     .student-card {
       flex-basis: 80%;
     }
+  }
+  .slider-btn-left,
+  .slider-btn-right {
+    display: none;
   }
 }
