@@ -169,7 +169,11 @@ nav {
 .primary-btn:hover .right-arrow {
   transform: translateX(12px);
 }
-
+/* Feature styles */
+.feature-content {
+  background-color: #f4fafd;
+  padding: 4rem 3rem;
+}
 /* Register Styles */
 .register-section {
   background-color: var(--primary-color);
@@ -291,3 +295,5 @@ footer p {
     flex-basis: 80%;
   }
 }
+
+/* THE END */
