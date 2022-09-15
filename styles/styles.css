@@ -54,14 +54,17 @@ nav {
   height: 80px;
   z-index: 999;
 }
+
 .navbar {
   display: flex;
   align-items: center;
 }
+
 .logo {
   font-family: cursive;
 }
 .nav-item {
+  padding: 0.25rem 0.5rem;
   margin-right: 12px;
   border-radius: 4px;
   transition: all 0.2s ease-in;
@@ -95,6 +98,7 @@ nav {
   border: 2px solid #fff;
 }
 /* Slider Styles */
+
 .carousel {
   position: relative !important;
 }
@@ -231,23 +235,7 @@ nav {
   font-size: 24px;
   color: #fff;
 }
-/* Media Quries to overwrite some default bootstrap responsive sytles*/
 
-/* For tablets */
-@media screen and (min-width: 767px) and (max-width: 992px) {
-  header h1 {
-    font-size: 44px;
-  }
-  header p {
-    text-align: justify;
-  }
-  .course-item {
-    flex-basis: 100%;
-  }
-  .student-card {
-    flex-basis: 48%;
-  }
-}
 /* Footer Syles */
 footer {
   background-color: #161616;
@@ -279,8 +267,45 @@ footer a:hover {
 footer p {
   color: #d9dbe1;
 }
+
+/* Media Quries to overwrite some default bootstrap responsive sytles*/
+
+/* For tablets */
+@media screen and (min-width: 767px) and (max-width: 992px) {
+  .navbar-collapse {
+    background-color: #fff !important;
+    flex-direction: column;
+    padding: 1.5rem 0 2.5rem;
+  }
+  .navbar-toggler {
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  header h1 {
+    font-size: 44px;
+  }
+  header p {
+    text-align: justify;
+  }
+  .course-item {
+    flex-basis: 100%;
+  }
+  .student-card {
+    flex-basis: 48%;
+  }
+}
+
 /* For mobiles */
 @media screen and (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #fff !important;
+    flex-direction: column;
+    padding: 1.5rem 0 2.5rem;
+  }
+  .navbar-toggler {
+    display: inline-block;
+    margin-bottom: 12px;
+  }
   header h1 {
     font-size: 44px;
   }
