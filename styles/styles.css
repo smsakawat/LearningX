@@ -37,16 +37,16 @@ P {
 .primary-btn:hover {
   background-color: var(--dark-sky);
 }
-.primary-btn a:link,
-.primary-btn a:visited {
-  text-decoration: none;
+.link:link,
+.link:visited {
+  cursor: pointer;
+  text-decoration: none !important;
   color: #fff;
 }
-.primary-btn a {
+.link:hover,
+.link:active {
   color: #fff;
-  text-decoration: none;
 }
-
 /* Component Styles */
 
 /* Header Styles */
@@ -104,26 +104,27 @@ nav {
   background-size: cover;
   position: relative;
   border-radius: 5px;
+  background-position: center;
 }
 .slider-one {
   background-image: linear-gradient(
-      rgba(34, 34, 34, 0.7),
-      rgba(34, 34, 34, 0.7)
+      rgba(34, 34, 34, 0.76),
+      rgba(34, 34, 34, 0.76)
     ),
     url(../images/cover/cover-1.png);
 }
 .slider-two {
   background-image: linear-gradient(
-      rgba(34, 34, 34, 0.7),
-      rgba(34, 34, 34, 0.7)
+      rgba(34, 34, 34, 0.76),
+      rgba(34, 34, 34, 0.76)
     ),
     url(../images/cover/cover-2.jpg);
 }
 
 .slider-three {
   background-image: linear-gradient(
-      rgba(34, 34, 34, 0.7),
-      rgba(34, 34, 34, 0.7)
+      rgba(34, 34, 34, 0.76),
+      rgba(34, 34, 34, 0.76)
     ),
     url(../images/cover/cover-3.jpg);
 }
@@ -210,6 +211,7 @@ nav {
   top: 50%;
   left: 0;
   transform: translate(-50%, -50%);
+  cursor: not-allowed;
 }
 .slider-btn-left i:before {
   font-size: 24px;
@@ -229,6 +231,12 @@ nav {
 
 /* For tablets */
 @media screen and (min-width: 767px) and (max-width: 992px) {
+  header h1 {
+    font-size: 44px;
+  }
+  header p {
+    text-align: justify;
+  }
   .course-item {
     flex-basis: 100%;
   }
@@ -236,8 +244,45 @@ nav {
     flex-basis: 48%;
   }
 }
+/* Footer Syles */
+footer {
+  background-color: #161616;
+  padding: 5rem;
+}
+
+footer .social-icons {
+  gap: 14px;
+}
+footer .social-icons .icon {
+  font-size: 20px;
+  color: lightgray;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+footer .social-icons .icon:hover {
+  transform: scale(0.9);
+  color: rgb(173, 173, 173);
+}
+footer a:link,
+footer a:visited {
+  color: lightgray !important;
+  padding-bottom: 4px;
+  text-decoration: none;
+}
+footer a:hover {
+  color: lightgray !important;
+}
+footer p {
+  color: #d9dbe1;
+}
 /* For mobiles */
 @media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 44px;
+  }
+  header p {
+    text-align: justify;
+  }
   .course-item {
     flex-basis: 80%;
     margin: 0 auto;
